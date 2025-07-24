@@ -28,7 +28,7 @@ function Arrow(props: ArrowProps) {
     }
     return (
         <>
-            <img style={style} src={`/img/arrow${isShort? "Short": "Long"}.svg`} />
+            <img alt={props.direction === "left"? "<" : ">"} style={style} src={`/img/arrow${isShort? "Short": "Long"}.svg`} />
         </>
     )
 }
@@ -49,27 +49,27 @@ export function ImageGroup(props: ImageGroupProps) {
     return (
         <>
             <div className="imageGroup">
-                {props.images.length > 1 && <button onMouseDown={decrementImage}><Arrow style={{height: "1em"}} direction="left" type="short"/></button>}
+                {props.images.length > 1 && <button aria-label="Previous image" onMouseDown={decrementImage}><Arrow style={{height: "1em"}} direction="left" type="short"/></button>}
                 {
                     props.images.map((image, idx) => {
                         return <img key={idx} src={image} alt={image} style={{left: (-currentImage)+"00%", position: "relative"}} onMouseDown={()=>setPopupOpen(true)} />;
                     })
                 }
-                {props.images.length > 1 && <button onMouseDown={incrementImage}><Arrow style={{height: "1em"}} direction="right" type="short"/></button>}
+                {props.images.length > 1 && <button aria-label="Next image" onMouseDown={incrementImage}><Arrow style={{height: "1em"}} direction="right" type="short"/></button>}
             </div>
 
             {/* Popup */
             popupOpen && <div className="popupBackground" onMouseDown={()=>setPopupOpen(false)}>
                 <div className="popup">
-                    <button className="button" style={{float: "right", "--hoverColor": "#f727279e"} as React.CSSProperties}>✖</button>
+                    <button aria-label="Close" className="button" style={{float: "right", "--hoverColor": "#f727279e"} as React.CSSProperties}>✖</button>
                     <img src={props.images[currentImage]} onMouseDown={(e)=>e.stopPropagation()} />
                     
                     <div onMouseDown={(e)=>e.stopPropagation()}>
-                        {props.images.length > 1 &&<button className="button" style={{marginRight: "10px"}} onMouseDown={decrementImage}><Arrow style={{height: "1em", filter: theme.isLightMode? "invert()": ""}} direction="left"/></button> }
-                        <button onClick={()=>download(props.images[currentImage].replace("/projects/","/projects-png/").replace(".avif",".png"))} className="button" style={{marginRight: "10px"}}>
+                        {props.images.length > 1 &&<button aria-label="Previous image" className="button" style={{marginRight: "10px"}} onMouseDown={decrementImage}><Arrow style={{height: "1em", filter: theme.isLightMode? "invert()": ""}} direction="left"/></button> }
+                        <button aria-label="Download image" onClick={()=>download(props.images[currentImage].replace("/projects/","/projects-png/").replace(".avif",".png"))} className="button" style={{marginRight: "10px"}}>
                             <img src="/img/download.svg" alt="download" style={theme.isLightMode? {}: {filter: "invert(1)"}} draggable="false"/>
                         </button>
-                        {props.images.length > 1 &&<button className="button" onMouseDown={incrementImage}><Arrow style={{height: "1em", filter: theme.isLightMode? "invert()": ""}} direction="right"/></button> }
+                        {props.images.length > 1 &&<button aria-label="Next image" className="button" onMouseDown={incrementImage}><Arrow style={{height: "1em", filter: theme.isLightMode? "invert()": ""}} direction="right"/></button> }
                     </div>
                 </div>
             </div>
