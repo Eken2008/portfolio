@@ -43,7 +43,7 @@ export default function Theme({ children }: { children: React.ReactNode }) {
     return (
         <ThemeContext.Provider value={{ isLightMode, toggleTheme }}>
             {children}
-            <button id="toggleTheme" className="button" onClick={toggleTheme} area-label="Toggle theme">
+            <button id="toggleTheme" className="button" onMouseDown={toggleTheme} area-label="Toggle theme">
                 <img alt="Turn on darkmode" src="/img/darkmode.svg" style={{ opacity: isLightMode ? 1 : 0 }} />
                 <img alt="Turn on lightmode" src="/img/lightmode.svg" style={{ opacity: isLightMode ? 0 : 1 }} />
             </button>

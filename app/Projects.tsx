@@ -287,7 +287,6 @@ export default function Projects() {
                         Created together with [Bla0](https://github.com/Blaa00)."
                         image={["bondejns1.avif", "bondejns2.avif", "bondejns3.avif"]}
                         link="https://bagott.dev/download/?game=bondejns"
-                        github="https://github.com/Blaa00/BondeJns/tree/master"
                         stack={["Python", "Pygame"]}
                         color="#84fd67"
                         stackFilter={filters}
