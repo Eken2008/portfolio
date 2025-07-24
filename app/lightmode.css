@@ -1,0 +1,32 @@
+body.lightmode {
+  --foreground: #282828;
+  --bg1: #ffffff;
+  --bg2: #fff;
+  --bg3: #f0f0f0d0;
+  --shadow: rgb(150, 150, 150);
+  --oddSection: #fff;
+  --evenSection: #fbfbfb;
+  --skillCardTitle: #147eff;
+  --linkColor: #0ea7ff;
+  transition: color 300ms, background 300ms;
+}
+
+body.lightmode > header > a:nth-child(1) {
+  --hoverColor: #65a8ff;
+}
+body.lightmode > header > a:nth-child(3) {
+  --hoverColor: #30ff7f;
+}
+body.lightmode > header {
+  border-color: #ccc;
+}
+body.lightmode > #toggleTheme > img {
+  filter: invert(0);
+}
+
+body.lightmode .linkedinLink {
+  --hoverColor: #157df9ed;
+  box-shadow: 0 0 5px var(--shadow);
+  background: #fff;
+  color: #000 !important;
+}
