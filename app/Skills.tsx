@@ -26,7 +26,7 @@ export default function Skills() {
                 <div className="skills">
                     <Skill title="Web Development" content={["HTML, CSS, JavaScript", "TypeScript", "React", "Node.js", "Python", "Sql", "Nginx"]} color="#e1c42b"/>
                     <Skill title="Game Development" content={["Unity", "Godot", "C#", "Pygame"]}  color="#24c2ffb2"/>
-                    <Skill title="Other Skills" content={["Git", "Docker", "Linux", "Problem Solving", "3D Modelling"]} color="#44ff3e"/>
+                    <Skill title="Other Skills" content={["Git", "SSH", "Docker", "Linux", "Problem Solving", "3D Modelling"]} color="#44ff3e"/>
                 </div>
             </div>
         </section>

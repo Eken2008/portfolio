@@ -5,7 +5,7 @@ export default function About() {
                 <h1>About Me</h1>
                 <p>
                     Hi! I'm Oskar Eklöv, a software developer from Stockholm, Sweden with a love for building web applications and exploring new technologies. I enjoy solving complex problems and continuously learning to improve my skills.
-                    My programming jorney started with Python in 2019, when I was 11 years old.
+                    My programming journey started with Python in 2019, when I was 11 years old.
                 </p>
                 <p>
                     I tried frontend development in 2022 with JavaScript and made my first games in Unity with C#. In 2024, I gave TypeScript a try and now I can't go back.
