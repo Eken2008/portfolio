@@ -87,6 +87,15 @@ export default function Projects() {
                 </div>
                 <div className="projects">
                     <Project
+                        name="Livelox Alternative"
+                        description="I got tired of all livelox bugs and didn't want to pay for premium, so I made my own alternative. I wrote the viewer originally in JavaScript in a few hours but has since rewritten it in TypeScript.
+                        I have also written the backend in TypeScript (originally python) and it allows you to upload routes and view them, as well as creating events. It is still in early developement, and will hopefully be ready for a test as the first analysis tool for indoor orienteering in late 2026."
+                        image={["livelox1.avif","livelox2.avif","livelox3.avif","livelox4.avif","livelox5.avif", "livelox6.avif"]}
+                        link="https://coursetrack.bagott.dev/"
+                        stack={["HTML","CSS","TypeScript","React","Next.js","SQLite","Nginx"]}
+                        stackFilter={filters}
+                    />
+                    <Project
                         name="Search"
                         description={`A "search engine" that allows you to search on any real search engine you want, 
                             and set custom bangs to search on specific websites, for example, typing "!w" will search on Wikipedia.
@@ -107,14 +116,6 @@ export default function Projects() {
                         image={["traininfo1.avif", "traininfo2.avif", "traininfo3.avif"]}
                         link="https://tag.bagott.dev"
                         stack={["HTML", "CSS", "JavaScript", "Python", "SQLite", "Nginx"]}
-                        stackFilter={filters}
-                    />
-                    <Project
-                        name="Livelox Alternative"
-                        description="I got tired of all livelox bugs and didn't want to pay for premium, so I made my own alternative. I wrote the viewer originally in JavaScript in a few hours but has since rewritten it in TypeScript.
-                        I have also written the backend in python and it allows you to upload routes and view them. It is almost finished after just a few days of work, however there are some small things I need to fix befor making it public."
-                        image={["livelox1.avif","livelox2.avif","livelox3.avif","livelox4.avif","livelox5.avif"]}
-                        stack={["HTML","CSS","TypeScript","Python","SQLite","Nginx"]}
                         stackFilter={filters}
                     />
                     <Project
